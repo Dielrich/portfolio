@@ -1,0 +1,36 @@
+// génération de couleur
+$color-1: #111827;
+$color-2: #1f2937;
+$color-3: #e5e7eb;
+
+// border-radius
+$borderRadius: 20px;
+
+// fonction pour centrer en flex
+@mixin verticalCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  font-family: Courier, monospace;
+}
+
+body {
+  background: $color-1;
+  color: $color-3;
+}
+footer {
+  @include verticalCenter;
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
+  padding: 20px;
+  border-top: 1px solid $color-3;
+  margin-top: 170px;
+}

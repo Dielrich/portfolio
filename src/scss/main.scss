@@ -1,9 +1,47 @@
-* {
-  margin: 0;
-  padding: 0;
+@import "./settings";
+@import "./components/navigation";
+
+/* SECTION LANDING PAGE */
+
+.landingPage {
+  @include verticalCenter;
+  flex-direction: column;
+  gap: 10px;
+  height: 100vh;
+  background-image: url(../../src/assets/img/bg-portfolio.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  .landingTitle {
+    font-size: 5rem;
+  }
+  .landingName {
+    font-size: 3rem;
+    margin: 35px 0;
+  }
+  .landingContent {
+    font-size: 2.5rem;
+  }
 }
 
-body {
-  background: #000;
-  color: white;
+/* SECTION PROFIL */
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  .personnalPicture {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin: 30px 0;
+  }
+  .aboutContent {
+    width: 50%;
+    p {
+      margin: 20px 0;
+      font-size: 1.1rem;
+    }
+  }
 }
