@@ -1,0 +1,20 @@
+.landingPage {
+  @include verticalCenter;
+  flex-direction: column;
+  gap: 10px;
+  height: 100vh;
+  background-image: url(../assets/img/bg-portfolio.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  .landingTitle {
+    font-size: 5rem;
+  }
+  .landingName {
+    font-size: 3rem;
+    margin: 35px 0;
+  }
+  .landingContent {
+    font-size: 2.5rem;
+  }
+}

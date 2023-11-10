@@ -38,7 +38,6 @@ footer {
       text-decoration: none;
       color: #e5e7eb; }
 
-/* SECTION LANDING PAGE */
 .landingPage {
   display: flex;
   justify-content: center;
@@ -58,7 +57,6 @@ footer {
   .landingPage .landingContent {
     font-size: 2.5rem; }
 
-/* SECTION PROFIL */
 .about {
   display: flex;
   justify-content: center;
@@ -77,7 +75,6 @@ footer {
       font-size: 1.1rem;
       text-align: justify; }
 
-/* SECTION SKILLS */
 #skills {
   display: flex;
   justify-content: center;
@@ -92,7 +89,8 @@ footer {
     margin-top: 25px;
     font-size: 1.2rem;
     text-decoration: underline; }
-  #skills .skillLogo .front-end, #skills .skillLogo .back-end, #skills .skillLogo .other {
+  #skills .skillLogo .front-end, #skills .skillLogo .back-end,
+  #skills .skillLogo .other {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -105,4 +103,7 @@ footer {
       height: auto;
       background-color: rgba(160, 160, 160, 0.2);
       border-radius: 20px;
-      box-shadow: 2px 2px 10px #4b4848; }
+      box-shadow: 2px 2px 10px #4b4848;
+      transition: scale 0.3s; }
+      #skills .skillLogo .front-end img:hover, #skills .skillLogo .back-end img:hover, #skills .skillLogo .other img:hover {
+        scale: 1.1; }
