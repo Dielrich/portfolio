@@ -22,7 +22,7 @@ footer {
 
 .navbar {
   position: fixed;
-  width: 100%;
+  width: 100vw;
   background: linear-gradient(to bottom, #111827, #1f2937);
   border-bottom: 1px solid #e5e7eb;
   filter: blur(); }
@@ -37,6 +37,9 @@ footer {
       position: relative;
       text-decoration: none;
       color: #e5e7eb; }
+  @media screen and (max-width: 490px) {
+    .navbar {
+      display: none; } }
 
 .landingPage {
   display: flex;
@@ -61,27 +64,31 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  height: 100vh; }
-  .about .personnalPicture {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    margin: 30px 0; }
+  flex-direction: column; }
+  .about .aboutPicture {
+    max-width: 250px;
+    height: auto; }
+    .about .aboutPicture .personnalPicture {
+      max-width: 100%;
+      height: auto;
+      border-radius: 50% 50% 50% 0;
+      margin: 30px 10px; }
   .about .aboutContent {
-    width: 50%; }
+    width: 80%;
+    height: auto; }
     .about .aboutContent p {
       margin: 20px 0;
       font-size: 1.1rem;
       text-align: justify; }
+      @media screen and (max-width: 576px) {
+        .about .aboutContent p {
+          text-align: center; } }
 
 #skills {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  height: 100vh;
-  width: auto; }
+  flex-direction: column; }
   #skills .titleSkills {
     text-align: center; }
   #skills h4 {
@@ -107,3 +114,62 @@ footer {
       transition: scale 0.3s; }
       #skills .skillLogo .front-end img:hover, #skills .skillLogo .back-end img:hover, #skills .skillLogo .other img:hover {
         scale: 1.1; }
+
+#portfolio {
+  max-height: 100vh;
+  width: auto;
+  margin: 50px 0; }
+  #portfolio h2 {
+    text-align: center;
+    margin-bottom: 15px; }
+  #portfolio .card {
+    max-height: 100%;
+    width: auto; }
+    #portfolio .card .cardContent {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex-direction: column;
+      max-height: 100vh;
+      width: 50%;
+      margin: 0 auto;
+      padding: 30px 10px;
+      border: 1px solid #e5e7eb;
+      border-radius: 35px;
+      overflow: hidden; }
+      @media screen and (max-width: 576px) {
+        #portfolio .card .cardContent {
+          width: 80%;
+          height: auto;
+          text-align: center;
+          font-size: 0.8rem; } }
+      #portfolio .card .cardContent h4 {
+        padding-top: 15px; }
+      #portfolio .card .cardContent p {
+        max-width: 100%;
+        height: auto;
+        text-align: justify;
+        padding: 15px; }
+      #portfolio .card .cardContent ul {
+        display: flex;
+        gap: 10px;
+        margin: 10px 0; }
+        @media screen and (max-width: 576px) {
+          #portfolio .card .cardContent ul {
+            display: block;
+            text-align: center; } }
+        #portfolio .card .cardContent ul li {
+          text-transform: uppercase;
+          font-style: italic; }
+      #portfolio .card .cardContent button {
+        padding: 10px;
+        margin: 10px;
+        border: 1px solid #111827;
+        border-radius: 20px;
+        background: lightblue;
+        transition: background 0.3s ease-out, scale 0.3s ease-in-out, box-shadow 0.3s ease-in-out; }
+        #portfolio .card .cardContent button:hover {
+          background: #e5e7eb;
+          font-weight: bold;
+          scale: 1.06;
+          box-shadow: 0px 0px 150px 1px #e5e7eb; }

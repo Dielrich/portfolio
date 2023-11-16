@@ -1,6 +1,6 @@
 .navbar {
   position: fixed;
-  width: 100%;
+  width: 100vw;
   background: linear-gradient(to bottom, $color-1, $color-2);
   border-bottom: 1px solid $color-3;
   filter: blur();
@@ -16,5 +16,8 @@
         color: $color-3;
       }
     }
+  }
+  @media screen and (max-width: 490px) {
+    display: none;
   }
 }
