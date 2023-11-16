@@ -1,8 +1,6 @@
 #skills {
   @include verticalCenter;
   flex-direction: column;
-  height: 100vh;
-  width: auto;
   .titleSkills {
     text-align: center;
   }
