@@ -66,7 +66,7 @@ footer {
   align-items: center;
   flex-direction: column; }
   .about .aboutPicture {
-    max-width: 250px;
+    max-width: 200px;
     height: auto; }
     .about .aboutPicture .personnalPicture {
       max-width: 100%;
