@@ -32,6 +32,7 @@ footer {
   width: 100vw;
   background: linear-gradient(to bottom, #111827, #1f2937);
   border-bottom: 1px solid #e5e7eb;
+  z-index: 9999;
   filter: blur(); }
   .navbar .navContent {
     display: flex;
