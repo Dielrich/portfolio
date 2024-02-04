@@ -13,6 +13,10 @@ $borderRadius: 20px;
   align-items: center;
 }
 
+:root {
+  --basic-size: 1.6rem;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -21,10 +25,16 @@ $borderRadius: 20px;
   font-family: Courier, monospace;
 }
 
+html {
+  font-size: 16px;
+  font-weight: 400;
+}
+
 body {
   background: $color-1;
   color: $color-3;
 }
+
 footer {
   @include verticalCenter;
   text-align: center;
