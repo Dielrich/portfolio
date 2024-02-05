@@ -41,3 +41,12 @@ function myProject() {
 
 //affichage des projects
 document.querySelector(".card").innerHTML = myProject();
+
+// burger-menu //
+
+const menuBurger = document.getElementById("burger");
+const toggleMenu = document.querySelector(".navContent");
+menuBurger.addEventListener("click", () => {
+  toggleMenu.classList.toggle("opened-menu");
+  burger.classList.toggle("opened-burger");
+});

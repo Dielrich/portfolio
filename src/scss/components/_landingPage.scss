@@ -2,19 +2,20 @@
   @include verticalCenter;
   flex-direction: column;
   gap: 10px;
+  text-align: center;
   height: 100vh;
   background-image: url(../assets/img/bg-portfolio.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
   .landingTitle {
-    font-size: 5rem;
+    font-size: clamp(3rem, 5vw, 5rem);
   }
   .landingName {
-    font-size: 3rem;
+    font-size: clamp(1.9rem, 3.2vw, 3rem);
     margin: 35px 0;
   }
   .landingContent {
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 2vw, 2.5rem);
   }
 }

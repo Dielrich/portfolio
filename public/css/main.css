@@ -1,6 +1,3 @@
-:root {
-  --basic-size: 1.6rem; }
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -9,12 +6,12 @@
   font-family: Courier, monospace; }
 
 html {
-  font-size: 16px;
   font-weight: 400; }
 
 body {
   background: #111827;
-  color: #e5e7eb; }
+  color: #e5e7eb;
+  position: relative; }
 
 footer {
   display: flex;
@@ -28,8 +25,10 @@ footer {
   margin-top: 170px; }
 
 .navbar {
+  display: flex;
   position: fixed;
-  width: 100vw;
+  width: 100%;
+  padding: 1.75rem;
   background: linear-gradient(to bottom, #111827, #1f2937);
   border-bottom: 1px solid #e5e7eb;
   z-index: 9999;
@@ -39,15 +38,49 @@ footer {
     justify-content: center;
     align-items: center;
     gap: 20px;
-    width: 100%;
-    height: 10vh; }
+    width: 100%; }
     .navbar .navContent li a {
       position: relative;
       text-decoration: none;
       color: #e5e7eb; }
-  @media screen and (max-width: 490px) {
+    @media screen and (max-width: 576px) {
+      .navbar .navContent {
+        display: none; } }
+  .navbar .opened-menu {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%; }
+    .navbar .opened-menu li a {
+      color: white; }
+  @media screen and (max-width: 576px) {
     .navbar {
-      display: none; } }
+      width: fit-content;
+      padding: 1rem;
+      bottomtop: 0;
+      right: 0;
+      border: 1px solid #e5e7eb;
+      opacity: 0.85;
+      padding: 0.75rem; } }
+
+#icon-menu {
+  display: none; }
+  @media screen and (max-width: 576px) {
+    #icon-menu {
+      display: block;
+      cursor: pointer; } }
+  #icon-menu #up,
+  #icon-menu #middle,
+  #icon-menu #down {
+    transition: 0.4s all linear; }
+  #icon-menu .opened-burger #up {
+    transform: translate(7px, 0px) rotate(45deg); }
+  #icon-menu .opened-burger #middle {
+    opacity: 0; }
+  #icon-menu .opened-burger #down {
+    transform: translate(-10px, 8.5px) rotate(-45deg); }
 
 .landingPage {
   display: flex;
@@ -55,18 +88,19 @@ footer {
   align-items: center;
   flex-direction: column;
   gap: 10px;
+  text-align: center;
   height: 100vh;
   background-image: url(../assets/img/bg-portfolio.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed; }
   .landingPage .landingTitle {
-    font-size: 5rem; }
+    font-size: clamp(3rem, 5vw, 5rem); }
   .landingPage .landingName {
-    font-size: 3rem;
+    font-size: clamp(1.9rem, 3.2vw, 3rem);
     margin: 35px 0; }
   .landingPage .landingContent {
-    font-size: 2.5rem; }
+    font-size: clamp(2rem, 2vw, 2.5rem); }
 
 .about {
   display: flex;
@@ -172,6 +206,9 @@ footer {
         padding: 15px; }
       #portfolio .card .cardContent ul {
         display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
         gap: 10px;
         margin: 10px 0; }
         @media screen and (max-width: 576px) {
