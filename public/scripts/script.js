@@ -43,10 +43,19 @@ function myProject() {
 document.querySelector(".card").innerHTML = myProject();
 
 // burger-menu //
+const toggleMenu = document.querySelector(".navbar");
+const links = document.querySelectorAll(".navContent li");
 
-const menuBurger = document.getElementById("burger");
-const toggleMenu = document.querySelector(".navContent");
-menuBurger.addEventListener("click", () => {
+// Ajout de class sur UL pour gestion apparition et disparition
+burger.addEventListener("click", () => {
   toggleMenu.classList.toggle("opened-menu");
   burger.classList.toggle("opened-burger");
+});
+
+// disparition du menu lors du click sur un onglet
+links.forEach((link) => {
+  link.addEventListener("click", () => {
+    toggleMenu.classList.remove("opened-menu");
+    burger.classList.remove("opened-burger");
+  });
 });
